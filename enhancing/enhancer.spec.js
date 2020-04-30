@@ -122,12 +122,12 @@ describe("enhancer.js", () => {
     it("if enhancement of (item) > 16 = enhancement -1", () => {
       const item = {
         name: "Giovani",
-        durability: 50,
+        durability: 55,
         enhancement: 18,
       };
       const expects = {
         name: "Giovani",
-        durability: 40,
+        durability: 45,
         enhancement: 17,
       };
       const itemFail = fail(item);
