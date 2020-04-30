@@ -103,12 +103,12 @@ describe("enhancer.js", () => {
       const items = {
         name: "Giovani",
         durability: 100,
-        enhancement: 17,
+        enhancement: 15,
       };
       const expects = {
         name: "Giovani",
         durability: 90,
-        enhancement: 16,
+        enhancement: 15,
       };
       const itemFail = fail(items);
 
@@ -123,12 +123,12 @@ describe("enhancer.js", () => {
       const item = {
         name: "Giovani",
         durability: 55,
-        enhancement: 18,
+        enhancement: 17,
       };
       const expects = {
         name: "Giovani",
-        durability: 45,
-        enhancement: 17,
+        durability: 55,
+        enhancement: 16,
       };
       const itemFail = fail(item);
 

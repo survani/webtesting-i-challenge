@@ -37,10 +37,17 @@ function fail(item) {
       enhancement: item.enhancement,
     };
     return failItem;
-  } else if (item.enhancement >= 15 && item.enhancement > 16) {
+  } else if (item.enhancement >= 15 && item.enhancement < 16) {
     const failItem = {
       name: item.name,
       durability: item.durability - 10,
+      enhancement: item.enhancement,
+    };
+    return failItem;
+  } else if (item.enhancement > 16) {
+    const failItem = {
+      name: item.name,
+      durability: item.durability,
       enhancement: item.enhancement - 1,
     };
     return failItem;
