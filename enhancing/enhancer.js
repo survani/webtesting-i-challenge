@@ -37,11 +37,11 @@ function fail(item) {
       enhancement: item.enhancement,
     };
     return failItem;
-  } else if (item.enhancement >= 15 && item.enhancement < 16) {
+  } else if (item.enhancement >= 15) {
     const failItem = {
       name: item.name,
       durability: item.durability - 10,
-      enhancement: item.enhancement,
+      enhancement: item.enhancement - 1,
     };
     return failItem;
   } else if (item.enhancement > 16) {
@@ -55,12 +55,14 @@ function fail(item) {
 }
 //when an item is repaired the only thing that changes is the durabiility.
 function repair(item) {
-  const repairedItem = {
-    name: item.name,
-    durability: 100,
-    enhancement: item.enhancement,
-  };
-  return repairedItem;
+  if (item.durability === 0 || item.durability < 101) {
+    const repairedItem = {
+      name: item.name,
+      durability: 100,
+      enhancement: item.enhancement,
+    };
+    return repairedItem;
+  }
 }
 
 function get(item) {

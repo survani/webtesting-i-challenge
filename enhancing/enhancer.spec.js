@@ -9,7 +9,7 @@ describe("enhancer.js", () => {
     it("should make durability from Number to 100...", () => {
       const items = {
         name: "Giovani",
-        durability: 15,
+        durability: 30,
         enhancement: 20,
       };
 
@@ -108,7 +108,7 @@ describe("enhancer.js", () => {
       const expects = {
         name: "Giovani",
         durability: 90,
-        enhancement: 15,
+        enhancement: 14,
       };
       const itemFail = fail(items);
 
@@ -127,7 +127,7 @@ describe("enhancer.js", () => {
       };
       const expects = {
         name: "Giovani",
-        durability: 55,
+        durability: 45,
         enhancement: 16,
       };
       const itemFail = fail(item);
